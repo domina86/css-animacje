@@ -1,0 +1,188 @@
+body {overflow-x: hidden;}
+
+
+.a1 {text-align:center;
+    padding:15px 0;
+    animation:moja_animacja 12s infinite;
+    -webkit-animation:moja_animacja 12s infinite;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    display: block;}
+
+  @keyframes moja_animacja
+      {
+        0% { background-color:white; }
+        25% { background-color:gold; }
+        50% { background-color:red; }
+        75% { background-color:green; }
+        100% { background-color:white; }
+      }
+
+.a2 {text-align:center;
+    padding:15px 0;
+    animation:moja_animacja 12s infinite;
+    -webkit-animation:moja_animacja2 12s infinite;
+    width: 300px;
+    margin:20px auto 20px;
+    display: block;
+height: 400px;}
+
+@keyframes moja_animacja2
+{
+  0% { background-color:white; width:450px; color:red; }
+  25% { background-color:gold; }
+  50% { background-color:red; color:blue; }
+  75% { background-color:green; width:300px; }
+  100% { background-color:white; width:450px; opacity:0;}
+}
+.a3{
+    text-align: center;
+    padding: 15px 0;
+    border: 3px solid red;
+    animation-name:szerokość;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name:szerokosc;
+    -webkit-animation-duration:5s;
+    -webkit-animation-iteration-count:infinite;
+    margin: 20px auto 20px;
+    display: block;}
+    
+      @keyframes szerokosc
+      {
+        0% { width:150px; }
+        100% { width:350px; }
+      }
+
+      @-webkit-keyframes szerokosc
+      {
+        0% { width:150px; }
+        100% { width:350px; }
+      }
+
+.a4 {text-align:center;
+      padding:15px 0;
+      border:3px solid #FDD700;
+      animation-name:szerokosc, tlo;
+      animation-duration:5s, 500ms;
+      animation-timing-function:ease-in-out, linear;
+      animation-delay:0s, 5s;
+      animation-iteration-count:infinite, infinite;
+      animation-direction:alternate, normal;
+      animation-fill-mode:backwards, forwards;
+      margin: 20px auto 20px;}
+
+ @keyframes szerokosc
+      {
+        0% { width:150px; }
+        100% { width:350px; }
+      }
+
+      @keyframes tlo
+      {
+        0% { background-color:#FFF; }
+        100% { background-color:#F00; }
+      }
+
+      @-webkit-keyframes szerokosc
+      {
+        0% { width:150px; }
+        100% { width:350px; }
+      }
+	  
+      @-webkit-keyframes tlo
+      {
+        0% { background-color:#FFF; }
+        100% { background-color:#F00; }
+      }
+.a5 {width:150px;
+    margin-top: 20px;
+    padding:15px 0;
+    text-align:center;
+    border:3px solid #FDD700;
+    animation: szerokość}
+
+.a5:hover {animation:szerokosc 2s infinite;
+        -webkit-animation:szerokosc 2s infinite;}
+
+
+ @keyframes szerokosc
+      {
+        0% { width:150px; }
+        100% { width:350px; }
+      }
+
+      @-webkit-keyframes szerokosc
+      {
+        0% { width:150px; }
+        100% { width:350px; }
+      }
+.anim-right{
+     animation-name:moja-animacja-1;
+        animation-duration:4s;
+        animation-iteration-count:infinite;
+        text-align:center;
+        width:400px;
+        height: 300px;
+        padding:0.5em;
+        font-size:1.3em;
+        background-color:blue;
+    margin: auto;
+}
+ @keyframes moja-animacja-1
+      {
+        0% { transform:translateX(0); }
+        100% { transform:translateX(200%); opacity:0;}
+      }
+.anim-top{
+  animation-name:moja-animacja-2;
+        animation-duration:4s;
+        animation-iteration-count:infinite;
+        text-align:center;
+        width:300px;
+        height: 400px;
+        background-color:blueviolet;
+        margin: 20px auto 20px;
+
+}
+@keyframes moja-animacja-2
+      {
+        0% { transform:translateY(0); }
+        100% { transform:translateY(1000px); opacity:0;}
+      }
+.anim-bottom{
+    animation-name: moja-animacja-3;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+    animation-direction:reverse;
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    background-color: aqua;
+    margin: 20px auto 20px;
+    
+}
+  @keyframes moja-animacja-3
+      {
+        0% { transform:translateY(0);opacity:0; }
+        100% { transform:translateY(500px); }
+      }
+
+.anim-left{
+    animation-name: moja-animacja-4;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+    animation-direction:reverse;
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    background-color: aqua;
+    margin: 20px auto 20px;
+    
+}
+  @keyframes moja-animacja-4
+      {
+        0% { transform:translateX(0);opacity:0; }
+        100% { transform:translateX(-500px); }
+      }
