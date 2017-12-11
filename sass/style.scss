@@ -1,102 +1,6 @@
-.a2 {text-align:center;
-    padding:15px 0;
-    animation:moja_animacja 12s infinite;
-    -webkit-animation:moja_animacja2 12s infinite;
-    width: 300px;
-    margin:20px auto 20px;
-    display: block;
-height: 400px;}
+/*animacja: znikajacy div w 4 kierunkach*/
 
-@keyframes moja_animacja2
-{
-  0% { background-color:white; width:450px; color:red; }
-  25% { background-color:gold; }
-  50% { background-color:red; color:blue; }
-  75% { background-color:green; width:300px; }
-  100% { background-color:white; width:450px; opacity:0;}
-}
-.a3{
-    text-align: center;
-    padding: 15px 0;
-    border: 3px solid red;
-    animation-name:szerokość;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    -webkit-animation-name:szerokosc;
-    -webkit-animation-duration:5s;
-    -webkit-animation-iteration-count:infinite;
-    margin: 20px auto 20px;
-    display: block;}
-    
-      @keyframes szerokosc
-      {
-        0% { width:150px; }
-        100% { width:350px; }
-      }
-
-      @-webkit-keyframes szerokosc
-      {
-        0% { width:150px; }
-        100% { width:350px; }
-      }
-
-.a4 {text-align:center;
-      padding:15px 0;
-      border:3px solid #FDD700;
-      animation-name:szerokosc, tlo;
-      animation-duration:5s, 500ms;
-      animation-timing-function:ease-in-out, linear;
-      animation-delay:0s, 5s;
-      animation-iteration-count:infinite, infinite;
-      animation-direction:alternate, normal;
-      animation-fill-mode:backwards, forwards;
-      margin: 20px auto 20px;}
-
- @keyframes szerokosc
-      {
-        0% { width:150px; }
-        100% { width:350px; }
-      }
-
-      @keyframes tlo
-      {
-        0% { background-color:#FFF; }
-        100% { background-color:#F00; }
-      }
-
-      @-webkit-keyframes szerokosc
-      {
-        0% { width:150px; }
-        100% { width:350px; }
-      }
-	  
-      @-webkit-keyframes tlo
-      {
-        0% { background-color:#FFF; }
-        100% { background-color:#F00; }
-      }
-.a5 {width:150px;
-    margin-top: 20px;
-    padding:15px 0;
-    text-align:center;
-    border:3px solid #FDD700;
-    animation: szerokość}
-
-.a5:hover {animation:szerokosc 2s infinite;
-        -webkit-animation:szerokosc 2s infinite;}
-
-
- @keyframes szerokosc
-      {
-        0% { width:150px; }
-        100% { width:350px; }
-      }
-
-      @-webkit-keyframes szerokosc
-      {
-        0% { width:150px; }
-        100% { width:350px; }
-      }
+/*div znikajacy w prawo*/
 .anim-right{
      animation-name:moja-animacja-1;
         animation-duration:4s;
@@ -107,13 +11,13 @@ height: 400px;}
         padding:0.5em;
         font-size:1.3em;
         background-color:blue;
-    margin: auto;
+        margin: auto;
 }
  @keyframes moja-animacja-1
-      {
-        0% { transform:translateX(0); }
+      {0% { transform:translateX(0); }
         100% { transform:translateX(200%); opacity:0;}
       }
+/*div znikajacy do góry*/
 .anim-top{
   animation-name:moja-animacja-2;
         animation-duration:4s;
@@ -130,6 +34,7 @@ height: 400px;}
         0% { transform:translateY(0); }
         100% { transform:translateY(1000px); opacity:0;}
       }
+/*div znikajacy w dół*/
 .anim-bottom{
     animation-name: moja-animacja-3;
     animation-duration: 4s;
@@ -148,6 +53,7 @@ height: 400px;}
         100% { transform:translateY(500px); }
       }
 
+/*div znikajcy w lewo*/
 .anim-left{
     animation-name: moja-animacja-4;
     animation-duration: 4s;
@@ -165,10 +71,8 @@ height: 400px;}
         0% { transform:translateX(0);opacity:0; }
         100% { transform:translateX(-500px); }
       }
-
-
-.btn-anim-bootom{
-    text-decoration: none;
+/* styl do wszystkich przycisków - dotyczy zmianiajacych kolor tła w róznych kierunkach*/
+.btn-anim-bootom, .btn-anim-top, .btn-anim-left, .btn-anim-right{         text-decoration: none;
     text-align: center;
     color: #3cbabe;
     border: 2px solid #3cbabe;
@@ -180,146 +84,53 @@ height: 400px;}
     overflow: hidden;
     margin: 20px auto 20px;
     display: block;
-    position: relative;
-    -webkit-animation: super-rainbow 2s infinite linear; 
-    -moz-animation: super-rainbow 2s infinite linear;
-}
-.btn-anim-bootom b {position: relative;
-   color:blue;}
+    position: relative;}
 
-.btn-anim-bootom:hover b { 
-    color:black;
-}
-.btn-anim-bootom:hover span{
+.btn-anim-bootom b, .btn-anim-top b, .btn-anim-left b, .btn-anim-right b {position: relative;}
+
+.btn-anim-bootom b, .btn-anim-top b, .btn-anim-left b, .btn-anim-right {-webkit-animation: super-rainbow 1s infinite linear; 
+-moz-animation: super-rainbow 1s infinite linear;}
+
+/*styl do przycisków dół-góra i góra-dół*/
+.btn-anim-bootom:hover span,.btn-anim-top:hover span{
     display: block;
     position: absolute;
     background:green;
     width:100%;
     height: 100%;
-    -moz-animation: bg-slide 2s linear;
-    -o-animation: bg-slide 2s linear;
-    -webkit-animation: bg-slide 2s linear;
-    animation: bg-slide 2s linear;
     z-index: 0;
-}
+   -moz-animation: bg-slide 0.30s linear;
+    -o-animation: bg-slide 0.30s linear;
+    -webkit-animation: bg-slide 0.30s linear;
+    animation: bg-slide 0.30s linear;}
+
+/*wspólna animacja do przycisków dół-góra i góra-dół*/
 @keyframes bg-slide {
 	from {-webkit-transform: translateY(100%);}
 	to {-webkit-transform: translateY(0%);}
 }
-.btn-anim-top{
-    text-decoration: none;
-    text-align: center;
-    color: #3cbabe;
-    border: 2px solid #3cbabe;
-    border-radius: 4px;
-    width: 150px;
-    line-height: 40px;
-    display: inline-block;
-    font-weight: 600;
-    overflow: hidden;
-    margin: 20px auto 20px;
-    display: block;
-    position: relative;
-    -webkit-animation: super-rainbow 2s infinite linear; 
-    -moz-animation: super-rainbow 2s infinite linear;
-}
-.btn-anim-top b {position: relative;
-   color:blue;}
-
-.btn-anim-top:hover b { 
-    color:black;
-}
+/*animacja góra-dół "kierunek animacji"*/
 .btn-anim-top:hover span{
-    display: block;
-    position: absolute;
-    background:green;
-    width:100%;
-    height: 100%;
-    -moz-animation: bg-slide 2s linear;
-    -o-animation: bg-slide 2s linear;
-    -webkit-animation: bg-slide 2s linear;
-    animation: bg-slide 2s linear;
-    z-index: 0;
-     animation-direction:reverse;
-}
-@keyframes bg-slide {
-	from {-webkit-transform: translateY(100%);}
-	to {-webkit-transform: translateY(0%);}
-}
-.btn-anim-left{
-    text-decoration: none;
-    text-align: center;
-    color: yellow;
-    border: 2px solid #3cbabe;
-    border-radius: 4px;
-    width: 150px;
-    line-height: 40px;
-    display: inline-block;
-    font-weight: 800;
-    overflow: hidden;
-    margin: 20px auto 20px;
-    display: block;
-    position: relative;
-    -webkit-animation: super-rainbow 8s infinite linear; 
-    -moz-animation: super-rainbow 8s infinite linear;
-}
-.btn-anim-left b {position: relative;
-   color:blue;}
+    animation-direction:reverse;}
 
-.btn-anim-left:hover b { 
-    color:black;
-}
-.btn-anim-left:hover span{
+/*syl do aniamcji lewo-prawo i prawo-lewo*/
+.btn-anim-left:hover span, .btn-anim-right:hover span{
     display: block;
     position: absolute;
     background:pink;
     width:100%;
     height: 100%;
-    -moz-animation: bt-slide 5s linear;
-    -o-animation: bt-slide 5s linear;
-    -webkit-animation: bt-slide 5s linear;
-    animation: bt-slide 5s linear;
+    -moz-animation: bt-slide 0.30s linear;
+    -o-animation: bt-slide 0.30s linear;
+    -webkit-animation: bt-slide 0.30s linear;
+    animation: bt-slide 0.30s linear;
     z-index: 0;
 }
+/*współn animacja do przycisków lewo-prawo i prawo-lewo*/
 @keyframes bt-slide {
 	from {-webkit-transform: translateX(100%);}
 	to { -webkit-transform: translateX(0%);}
 }
-.btn-anim-right{
-    text-decoration: none;
-    text-align: center;
-    color: yellow;
-    border: 2px solid #3cbabe;
-    border-radius: 4px;
-    width: 150px;
-    line-height: 40px;
-    display: inline-block;
-    font-weight: 600;
-    overflow: hidden;
-    margin: 20px auto 20px;
-    display: block;
-    position: relative;
-    -webkit-animation: super-rainbow 8s infinite linear; 
-    -moz-animation: super-rainbow 8s infinite linear;
-}
-.btn-anim-right b{position: relative;
-   color:blue;}
-
-.btn-anim-right:hover b{color:black;}
+/*animacja prawo-lewo "kierunek"*/
 .btn-anim-right:hover span{
-    display: block;
-    position: absolute;
-    background:pink;
-    width:100%;
-    height: 100%;
-    -moz-animation: bl-slide 5s linear;
-    -o-animation: bl-slide 5s linear;
-    -webkit-animation: bl-slide 5s linear;
-    animation: bl-slide 5s linear;
-    animation-direction:reverse;
-    z-index: 0;
-}
-@keyframes bl-slide{
-	from {-webkit-transform: translateX(100%);}
-	to {-webkit-transform: translateX(0%);}
-}
+    animation-direction:reverse;}
